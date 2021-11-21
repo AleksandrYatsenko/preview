@@ -1,23 +1,20 @@
 "use strict";
 
-// const obj = {
-//   name: 'John',
-//   age: 30,
-//   Married: false
-// };
+const numberOfFilms = +prompt('Сколько фильмов вы уе посмотрели?', '');
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false
+};
 
-// console.log(obj['name']);
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+      b = prompt('Ваша оценка фильму?', ''),
+      c = prompt('Один из последних просмотренных фильмов?', ''),
+      d = prompt('Ваша оценка фильму?', '');
 
-// const arr = ['plumb.png', 'string', 'orange.jpg', 6, 'apple.bmp', {}, []];
-// console.log(arr[1]);
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-let incr = 10,
-    decr = 10;
-
-console.log(++incr);
-console.log(--decr);
-
-console.log(incr);
-console.log(decr);
-
-// f:\stadiing\udemy\js+react\preview
+console.log(personalMovieDB);
