@@ -80,4 +80,34 @@ if (personalMovieDB.count < 10) {
   console.log('err');
 }
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
+
+function showMyDB () {
+  if (!personalMovieDB.privat) {
+    console.log(personalMovieDB);
+  } else {
+    console.log('sorry its private');
+  }
+}
+
+
+function writeYourGenres() {
+  for (let i = 1; i <= 3; i++) {
+    const c = prompt(`Your favorite genre number ${i}?`, '');
+    personalMovieDB.genres[i-1] = c;
+
+//personalMovieDB.genres[i-1] = prompt(`Your favorite genre number ${i}?`, '');
+  }
+  return personalMovieDB;
+}
+writeYourGenres();
+showMyDB();
+
+
+
+
+
+
+// const calc = (a, b) => { a + b; };
+
+
