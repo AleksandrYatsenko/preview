@@ -122,6 +122,47 @@ learnJS ('JavaScript', done);
 //   console.log('Я прошел этот урок!');
 // });
 
+const options = {
+  name: 'test',
+  width: 1024,
+  height: 1024,
+  colors: {
+    border: 'black',
+    bg: 'red'
+  },
+  makeTest: function (){
+    console.log('test');
+  }
+};
+
+options.makeTest();
+
+const {border, bg} = options.colors;
+console.log(border);
+
+//console.log(Object.keys(options).length);
+
+//console.log (options['colors']['border']);
+
+//console.log(options.name);
+
+//delete options.name;
+
+//console.log(options);
+
+// for (let key in options) {
+//   console.log(`Property ${key} has ${options[key]}`);
+// }
+
+// for (let key in options) {
+//   if (typeof(options[key]) === 'object') {
+//     for (let i in options[key]) {
+//       console.log(`Property ${i} has value ${options[key][i]}`);
+//     }
+//   } else {
+//     console.log(`Property ${key} has value ${options[key]}`);
+//   }
+// }
 
 
 
