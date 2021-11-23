@@ -96,7 +96,7 @@
 //     const c = prompt(`Your favorite genre number ${i}?`, '');
 //     personalMovieDB.genres[i-1] = c;
 
-//     //personalMovieDB.genres[i-1] = prompt(`Your favorite genre number ${i}?`, '');
+// personalMovieDB.genres[i-1] = prompt(`Your favorite genre number ${i}?`, '');
 //   }
 //   return personalMovieDB;
 // }
@@ -173,3 +173,55 @@
 //arr.slice(1, 4);
 // console.log(arr.reverse());
 //console.log(arr.concat(50, 60));
+
+const numbers = {
+  a: 2,
+  b: 4,
+  c: {
+    x: 7,
+    y: 4
+  }
+};
+
+const add = {
+  d: 17,
+  e: 20
+};
+
+//console.log(Object.assign(numbers, add));
+
+const clone = Object.assign({}, add);
+clone.d = 20;
+console.log(add);
+console.log(clone);
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+newArray[1] = 'swsw';
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wp', 'lj', 'blogger'],
+      internet = [...video, ...blogs, 'vk', 'fb'];
+console.log(internet);
+
+function log(a, b, c) {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+}
+const num = [2, 5, 7];
+log(...num);
+
+const arrey = ['a', 'b'];
+const newAr = [...arrey];
+console.log(newAr);
+
+const q = {
+  one: 1,
+  two: 2
+};
+const newQ = {...q};
+newQ.one = 20;
+console.log(newQ);
