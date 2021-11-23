@@ -107,38 +107,38 @@
 
 // CALLBACK-functions
 
-function learnJS(lang, callback) {
-  console.log(`Я учу: ${lang}`);
-  callback();
-}
+// function learnJS(lang, callback) {
+//   console.log(`Я учу: ${lang}`);
+//   callback();
+// }
 
-function done(){
-  console.log('Я прошел этот урок!');
-}
+// function done(){
+//   console.log('Я прошел этот урок!');
+// }
 
-learnJS ('JavaScript', done);
+// learnJS ('JavaScript', done);
 
 // learnJS ('JavaScript', function (){
 //   console.log('Я прошел этот урок!');
 // });
 
-const options = {
-  name: 'test',
-  width: 1024,
-  height: 1024,
-  colors: {
-    border: 'black',
-    bg: 'red'
-  },
-  makeTest: function (){
-    console.log('test');
-  }
-};
+// const options = {
+//   name: 'test',
+//   width: 1024,
+//   height: 1024,
+//   colors: {
+//     border: 'black',
+//     bg: 'red'
+//   },
+//   makeTest: function (){
+//     console.log('test');
+//   }
+// };
 
-options.makeTest();
+// options.makeTest();
 
-const {border, bg} = options.colors;
-console.log(border);
+// const {border, bg} = options.colors;
+// console.log(border);
 
 //console.log(Object.keys(options).length);
 
@@ -164,5 +164,12 @@ console.log(border);
 //   }
 // }
 
+// const str = prompt('', '');
+// const products = str.split(', ');
+// console.log(products.join('; '));
 
-
+//let arr = [2, 3, 4, 5, 6, 7, 8, 9];
+//massive.splice(2, 3, '60', '70', '80');
+//arr.slice(1, 4);
+// console.log(arr.reverse());
+//console.log(arr.concat(50, 60));
