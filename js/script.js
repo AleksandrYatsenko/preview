@@ -174,54 +174,107 @@
 // console.log(arr.reverse());
 //console.log(arr.concat(50, 60));
 
-const numbers = {
-  a: 2,
-  b: 4,
-  c: {
-    x: 7,
-    y: 4
+// const numbers = {
+//   a: 2,
+//   b: 4,
+//   c: {
+//     x: 7,
+//     y: 4
+//   }
+// };
+
+// const add = {
+//   d: 17,
+//   e: 20
+// };
+
+// //console.log(Object.assign(numbers, add));
+
+// const clone = Object.assign({}, add);
+// clone.d = 20;
+// console.log(add);
+// console.log(clone);
+
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();
+// newArray[1] = 'swsw';
+// console.log(newArray);
+// console.log(oldArray);
+
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wp', 'lj', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'fb'];
+// console.log(internet);
+
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// const num = [2, 5, 7];
+// log(...num);
+
+// const arrey = ['a', 'b'];
+// const newAr = [...arrey];
+// console.log(newAr);
+
+// const q = {
+//   one: 1,
+//   two: 2
+// };
+// const newQ = {...q};
+// newQ.one = 20;
+// console.log(newQ);
+
+// program about films DB
+
+const personalMovieDB = {
+  count: 0,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+  start: function () {
+    personalMovieDB.count = +prompt('Сколько фильмов Вы пересмотрели?', '');
+    while(personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+      personalMovieDB.count = +prompt('Сколько фильмов Вы пересмотрели?', '');
+    }
+  },
+  rememberMyFilms: function () {
+    for (let i = 0; i < 2; i++) {
+      const a = prompt('Какой последний просмотренный фильм?', '');
+      const b = prompt('Как оцените его?', '');
+      if (a != null && b != null && a != '' && b != '' && a.length < 50){
+        personalMovieDB.movies[a] = b;
+        console.log('done');
+      } else {
+        console.log('error');
+        i--;
+      }
+    }
+  },
+  toggleVisible: function () {
+    if (personalMovieDB.privat) {
+      personalMovieDB.privat = false;
+    } else {
+      personalMovieDB.privat = true;
+    }
+  },
+  writeYourGenres: function () {
+    for (let i = 1; i <= 3; i++){
+      let genre = prompt(`Какой любимый жанр под номером ${i}`);
+      if (genre == '' || genre == null) {
+        console.log('не корректный ввод');
+        i--;
+      } else {
+        personalMovieDB.genres[i-1] = genre;
+      }
+    }
+    personalMovieDB.genres.forEach((item, i) => {
+      console.log(`Любимый жанр номер ${i+1} - это ${item}`);
+    });
   }
 };
-
-const add = {
-  d: 17,
-  e: 20
-};
-
-//console.log(Object.assign(numbers, add));
-
-const clone = Object.assign({}, add);
-clone.d = 20;
-console.log(add);
-console.log(clone);
-
-const oldArray = ['a', 'b', 'c'];
-const newArray = oldArray.slice();
-newArray[1] = 'swsw';
-console.log(newArray);
-console.log(oldArray);
-
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wp', 'lj', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'fb'];
-console.log(internet);
-
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
-const num = [2, 5, 7];
-log(...num);
-
-const arrey = ['a', 'b'];
-const newAr = [...arrey];
-console.log(newAr);
-
-const q = {
-  one: 1,
-  two: 2
-};
-const newQ = {...q};
-newQ.one = 20;
-console.log(newQ);
+// personalMovieDB.start();
+// personalMovieDB.rememberMyFilms();
+// personalMovieDB.writeYourGenres();
