@@ -265,14 +265,48 @@
 const box = document.getElementById('box'),
       btns = document.getElementsByTagName('button'),
       circles = document.getElementsByClassName('circle'),
-      hearts = document.querySelectorAll('.heart'),
-      oneHeart = document.querySelector('.heart');
+      wrapper = document.querySelector('.wrapper'),
+      hearts = wrapper.querySelectorAll('.heart'),
+      oneHeart = wrapper.querySelector('.heart');
 
 // box.style.backgroundColor = 'blue';
 // box.style.width = '500px';
-box.style.cssText = 'background-color: blue; width: 500px';
+box.style.cssText = 'background-color: blue; width: 500px'; // добавили сразу несколько свойств
 btns[1].style.borderRadius = '50%';
 circles[0].style.backgroundColor = 'black';
+// for (let i = 0; i < hearts.length; i++) {            // для нескольких элементов сразу 1й вариант
+//   hearts[i].style.backgroundColor = 'yellow';
+// }
+hearts.forEach(item => {                           // для нескольких элементов сразу 2й вариант
+  item.style.backgroundColor = 'brown';
+});
+
+const div = document.createElement('div'); // создаем элемент div
+const text = document.createTextNode('тут пишем текст который нужно добавить');
+div.classList.add('black');     // добавим элементу класс .black
+//document.body.append(div);     // вставит div в конец документа, перед закрывающим /body
+document.querySelector('.wrapper').append(div); // вставит div в конец блока wrapper
+//wrapper.prepend(div); //вставит вначале
+//hearts[0].before(div);  // вставит перед 1-м элементом
+//hearts[0].after(div);   // вставит после 1-го элемента
+//circles[0].remove();    // удалит 1-й элемент
+hearts[0].replaceWith(circles[0]);  //заменит 1-й hearts(удалит) на 1-й circles (вставит)но и заберет circles[0] со старого места
+//div.innerHTML = 'hello world';   //вставит текст в div
+//div.innerHTML = '<h1>Hello!</h1>';  // вставит заголовок
+div.textContent = 'helloooo';    // вставит текст, работает только с текстом
+//div.insertAdjacentHTML('beforebegin', '<h2>world</h2>');  // вставит заголовок Н2 перед элементом
+//div.insertAdjacentHTML('afterbegin', '<h2>world</h2>');  // вставит заголовок Н2 в начало элемента
+//div.insertAdjacentHTML('beforeend', '<h2>world</h2>');  // вставит заголовок в конец элемента
+div.insertAdjacentHTML('afterend', '<h2>world</h2>');  // вставит заголовок Н2 после элемента
+
+
+
+
+
+
+
+
+
 
 
 // ---------------------------------------------------------
