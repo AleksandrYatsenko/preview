@@ -261,6 +261,15 @@
 
 // console.log(0 || "" || 2 || undefined || true || false); // 2 ('это первое true)
 
+// lesson  029
+const box = document.getElementById('box'),
+      btns = document.getElementsByTagName('button'),
+      circles = document.getElementsByClassName('circle'),
+      hearts = document.querySelectorAll('.heart'),
+      oneHeart = document.querySelector('.heart');
+
+
+
 
 // ---------------------------------------------------------
 // program about films DB
