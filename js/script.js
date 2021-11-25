@@ -226,6 +226,43 @@
 // newQ.one = 20;
 // console.log(newQ);
 
+// tasks (les27)
+// let x = 5;
+// console.log(x++); // 5 - сначала возвращает, а потом увиличивает на 1
+// console.log(++x); // 6
+
+// console.log([] + false - null + true);  // NaN ([] - приводится к пустой строке)
+
+// let y = 1;
+// let x = y = 2;
+// console.log(x); // 2
+
+// console.log([] +1 + 2);  // 12 ([] - преобразовуется в пустую строку и потом все приводится к строке)
+
+// console.log('1'[0]); // 1 (покажет первый символ строки как объекта)
+
+// console.log(2 && 1 && null && 0 && undefined); // null
+// // && - запинается на ЛЖИ и возвращает её
+
+// let a,
+//     b;
+// console.log(!!(a && b) == (a && b)); // false (первое вернет - boolean, а второе - значение)
+
+// console.log(null || 2 && 3 || 4); // 3
+// // (сначала выполнится && вернет 3 (последнее true), а потом || и вернет оба раза 3, как первое true)
+
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log(a == b); // false (не равны, это разные хранилища инфы)
+
+// console.log(+'Infinity'); // Infinity (приводит к числу)
+
+// console.log('Ёжик' > 'яблоко'); // false (я выше чем Ё в таблице символов unicode)
+
+// console.log(0 || "" || 2 || undefined || true || false); // 2 ('это первое true)
+
+
+// ---------------------------------------------------------
 // program about films DB
 
 const personalMovieDB = {
@@ -278,3 +315,7 @@ const personalMovieDB = {
 // personalMovieDB.start();
 // personalMovieDB.rememberMyFilms();
 // personalMovieDB.writeYourGenres();
+
+// -------------------------------------------------------------
+
+
